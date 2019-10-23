@@ -1,0 +1,222 @@
+/*estilos generales de la pagina*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+ /* font-family: 'Poppins', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja{
+    font-weight: 300;
+    color:orange;
+}
+
+.texto-blanco{
+    font-weight: 700;
+    
+    color:#fff;
+}
+
+.texto-negro{
+    
+    color:#000;
+}
+/*clases de full pague */
+
+#fp-nav ul li a span{
+    background: #2ebf91;
+}
+#fp-nav ul li .fp-tooltip{
+    color: #5c5c5c;
+}
+
+/*menu de navegacion*/
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index:70;
+    width: 100%;
+}
+
+.nav li,
+.nav a{
+    display: inline-block;
+    margin: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    transition: .5s ease;
+}
+
+.nav li.active{
+    border-bottom: 2px solid #2ebf91;
+}
+
+.menu li a{
+    transition: .5 ease;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+
+}
+.nav li.active a,
+.nav li:hover a{
+    color: #2ebf91;
+}
+
+
+/*estilos de la seccon header*/
+
+.header{
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../img/header-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.header .contenedor-titulo{
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+
+.header .titulo{
+    font-size: 6em;
+    text-transform: uppercase;
+}
+
+.header .contenedor-icono{
+    position: absolute;
+    z-index: 99;
+    bottom: 3%;
+    left: 50%;
+    font-size: 3em;
+    /*invoco la animacion creada */
+    animation: bajar-subir 1s ease infinite;
+}
+
+.bg-video{
+    /*el position absolute me permite manejar el z-index*/
+    position: absolute;
+    z-index: 10;
+    /*lo pociciono en el right en pocicion 0 y en top tabien en 0*/
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+/*animacion del icono */
+@keyframes bajar-subir{
+    0% {transform: translateY(1em);}
+    25% {transform: translateY(0em);}
+    100% {transform: translateY(1em);}
+}
+/**estilo primera seccion acerca de mi*/
+.descripcion{
+
+}
+.acerca-de-mi h1{
+    color: #ffffff;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 62px; font-weight: 800;
+    line-height: 72px;
+    margin: 0 0 24px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(95, 93, 93);
+}
+
+.acerca-de-mi p{
+    color: #fff9f9;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1em;
+    margin: 0 0 15px; 
+    padding: 1em;
+    text-justify: auto;
+    
+}
+ .acerca-de-mi .texto{
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    font-family: 'Nanum Gothic',sans-serif;
+    font-weight: 700;
+
+ }
+
+/*seccon de habilidades*/
+
+.container-boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.container-boxes .box{
+    position: relative;
+    width: 24%;
+    padding: 1em;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.container-boxes .box:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 4px);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+.container-boxes .box:hover:before{
+    bottom: 0;
+    color: #fff;
+}
+.container-boxes .box:nth-child(1):before{
+    background: #f87800;
+}
+.container-boxes .box:nth-child(2):before{
+    background: #2b1deb;
+}
+.container-boxes .box:nth-child(3):before{
+    background: #f6f203;
+}
+.container-boxes .box:nth-child(4):before{
+    background: #02c4f5;
+}
+
+.container-boxes .box div{
+    position: relative;
+    z-index: 2;
+}
+
+/*estilo de la seccion de portafolio*/
+
+.Portafolio article{
+    background-position: center;
+    background-size: cover;
+
+}
