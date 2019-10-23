@@ -128,9 +128,7 @@ h1,h2,h3,h4,h5,h6{
     100% {transform: translateY(1em);}
 }
 /**estilo primera seccion acerca de mi*/
-.descripcion{
 
-}
 .acerca-de-mi h1{
     color: #ffffff;
     font-family: 'Nanum Gothic', sans-serif;
@@ -218,5 +216,43 @@ h1,h2,h3,h4,h5,h6{
 .Portafolio article{
     background-position: center;
     background-size: cover;
+    text-align: center;
 
 }
+
+.Portafolio article p{
+    font-size: 1.5em;
+    color: #fff;
+    text-justify:inherit;
+}
+.Portafolio article picture img{
+    position: relative;
+    z-index: 25;
+    box-shadow:1px 3px 15px 4px #000000;
+    margin-top: 10px;
+
+}
+
+.Portafolio article:nth-child(1){
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+.Portafolio article:nth-child(2){
+    background: linear-gradient(to left, #757f9a, #d7dde8)
+}
+.Portafolio article:nth-child(3){
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+.Portafolio article:nth-child(4){
+    background: linear-gradient(to top, #56ab2f, #a8e063);
+}
+
+.texto-titulo{
+    position: relative;
+    font-weight: 300;
+    font-size: 5em;
+    color:rgb(255, 255, 255);
+    z-index: 50;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgb(95, 93, 93);
+}
+
